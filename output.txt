@@ -1,0 +1,26 @@
+--------------------------POST--------------------------------
+--------------------------GET--------------------------------
+functions.php:750:			if(isset($_GET['websitez-mobile'])){
+functions.php:900:	if(isset($_GET['websitez-plugin-notice'])):
+functions.php:1308:	if(isset($_GET['websitez-mobile'])){
+functions.php:1309:		if(isset($_GET['websitez-mobile-type'])){
+functions.php:1310:			$type = $_GET['websitez-mobile-type'];
+websitez-wp-mobile-detector.php:25:if(isset($_GET['websitez-mobile'])):
+--------------------------REQUEST--------------------------------
+resize.php:2:if (isset($_REQUEST['src'])) {
+resize.php:3:	$path = dirname(__FILE__) . "/cache/" . basename($_REQUEST['src']);
+resize.php:28:		file_put_contents($path, file_get_contents($_REQUEST['src']));
+resize.php:38:				$thumb -> Thumbsize = ($_REQUEST['w'] > 0 && $_REQUEST['w'] <= 320 ? $_REQUEST['w'] : 320);
+--------------------------SESSION--------------------------------
+--------------------------FILES--------------------------------
+--------------------------SERVER--------------------------------
+functions.php:5:	if(stripos($_SERVER['REQUEST_URI'],"/api/websitez-options.json") !== false){
+functions.php:673:		$response = unserialize(websitez_remote_request("http://stats.websitez.com/get_token.php","host=".$_SERVER['HTTP_HOST']."&email=".get_option('admin_email')."&source=wp-mobile-detector"));
+functions.php:982:			$insert = $wpdb->insert(WEBSITEZ_STATS_TABLE, array( 'data' => serialize($_SERVER), 'device_type' => $mobile_device['type'], 'created_at' => date("Y-m-d H:i:s") ) );
+functions.php:1086:		$query = $_SERVER['QUERY_STRING'];
+functions.php:1088:			header('Location: '.get_permalink($page).'?'.$_SERVER['QUERY_STRING']);
+functions.php:1305:  	$user_agent = $_SERVER['HTTP_USER_AGENT'];
+functions.php:1328:  	$accept = $_SERVER['HTTP_ACCEPT'];
+functions.php:1397:		case (isset($_SERVER['HTTP_X_WAP_PROFILE'])||isset($_SERVER['HTTP_PROFILE'])); //Any falling through the cracks
+--------------------------ENV--------------------------------
+--------------------------COOKIES--------------------------------
